@@ -193,9 +193,10 @@ fn main() {
         .with_env_filter(tracing_subscriber::filter::EnvFilter::from_default_env())
         .init();
 
-    let address = "GAZO4L3NT6KXGCYH7FSM7NWYO3O4WQ3DOEJI54MBPSMUPSCQJBMUBBGQ";
+    let address = std::env::var("STELLAR_ADDRESS")
+    .unwrap_or_else(|_| "GAZO4L3NT6KXGCYH7FSM7NWYO3O4WQ3DOEJI54MBPSMUPSCQJBMUBBGQ".to_string());
 
-    let account = build_account_data(address);
+    let account = build_account_data(&address);
 
     println!("=== ZKredit — Live Stellar Account ===");
     println!(
