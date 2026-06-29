@@ -1,4 +1,4 @@
-# ZKredit — Zero-Knowledge Credit Scoring on Stellar
+# ZKredit - Zero-Knowledge Credit Scoring on Stellar
 
 > Prove your financial reputation. Without revealing it.
 
